@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>练习form标签!</title>
+</head>
+<body>
+	<form action="#" method="post" enctype="multipart/form-data">
+		<table border="4" align="center">
+			<tr>
+				<td>用户名</td>
+				<td><input name="usename" type="text"></td>
+			</tr>
+			<tr>
+				<td>密&nbsp;&nbsp;码</td>
+				<td><input type="password" name="psw"></td>
+			</tr>
+			<tr>
+				<td>性&nbsp;&nbsp;别</td>
+				<td><input type="radio" name="sex" value="male"
+					checked="checked">男<input type="radio" name="sex"
+					value="female">女</td>
+			</tr>
+			<tr>
+				<td>爱&nbsp;&nbsp;好</td>
+				<td><select>
+						<option>--请选择你的爱好--</option>
+						<option value="注意不要死ad">女警</option>
+						<option value="打团要打好">兰博</option>
+						<option value="意识要跟上">宝石</option>
+						<option>其他的</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>学&nbsp;&nbsp;科</td>
+				<td>
+					<input type="checkbox" value="english">英语<input type="checkbox" value="math">数学<input type="checkbox" value="computer">计算机<input type="checkbox" value="sport">体育 
+				</td>
+			</tr>
+			<tr>
+				<td>文件</td>
+				<td><input type="file" name="file" accept="image/*"></td>
+			</tr>
+			<tr>
+				<td>自我评价</td>
+				<td><textarea rows="3" cols="10" value="text">请输入自我评价</textarea></textarea></td>
+			</tr>
+			<tr><td rowspan="2">
+				<input type="submit"  value="注册">
+				<input type="reset"  value="重置">
+				<input type="button" value="我是一个按钮">
+			</td></tr>
+			<tr>
+   			<td colspan="2">
+   			 	<img alt="免费注册" src="http://h.hiphotos.baidu.com/zhidao/pic/item/aec379310a55b3196497de3140a98226cffc1703.jpg">
+   			</td>
+   			</tr>
+		</table>
+	</form>
+</body>
+</html>

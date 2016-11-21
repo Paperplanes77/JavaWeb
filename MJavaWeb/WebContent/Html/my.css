@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+div{
+	font-size:90px;
+	color:blue;
+}
+/* id属性标签*/
+#div3{
+	background-color:pink;
+}
+/* 属性标签 */
+input[name="usename"]{
+	background-color:red;
+}
+/* 类标签 */
+.inp{
+	background-color:#256;
+}
+a:LINK{
+		 color:#333;
+}
+/* 悬浮 */
+a:HOVER{
+	font-size:90px;
+}
+/* 访问 */
+a:VISITED{
+	color：red;
+}
