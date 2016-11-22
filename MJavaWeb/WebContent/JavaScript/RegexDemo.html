@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>搜索字符串"w3cSchool",并显示匹配的其实位置:</p>
+	<button onclick="myFunction()">点我</button>
+	<p id="demo"></p>
+	<script type="text/javascript">
+	function myFunction(){
+		var str="Visit w3cSchool!";
+		var n=str.search(/w3cSchool/i);
+		document.getElementById("demo").innerHTML=n;
+	}
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,45 @@
+@CHARSET "UTF-8";
+table{
+	color:#00ff00;
+	background:write;
+	font-size:90px;
+}
+div{
+	background:yellow;
+	color:purple;
+	font-size:"20px;
+	font-family:楷体;
+}
+#div3{
+	color:red;
+	font-size:30px;
+	font-family:隶书;
+}
+.div4{
+	color:blue;
+	font-size:40px;
+	font-family:雅黑;
+}
+ul{
+	color:red;
+	font-size:30px;
+	font-family:隶书;
+}
+input {
+	color:pink;
+	font-size:25px;
+	font-family:行书;
+}
+input name[username]{
+	color:green;
+	font-size:40px;
+	font-family:隶书;
+}
+a:HOVER{
+	font-family:隶书;
+	font-size:90px;
+}
+a:VISTED{
+	font-family:隶书;
+	font-size:90px;
+}
