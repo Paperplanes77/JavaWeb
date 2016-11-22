@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+ function displayDate() {
+	document.getElementById("demo").innerHTML=Date();	
+}
+ </script>
+</head>
+<body>
+	<h1>我的第一个JavaScript程序</h1>
+	<p id="demo">这是一个段落</p>
+	<button type="button" onclick="displayDate()">显示日期</button>
+	<h2>我继续去练习</h2>
+	<p id="demo2">我的第一个段落。</p>
+	<div id="myDIV">一个DIV</div>
+	<script type="text/javascript">
+	document.write(Date());
+	/* 下面的代码会输出一个标题和一个短路
+	并将代表主页的开始 */
+	//document.getElementById("demo2").innerHTML="你好 Dolly";
+	document.getElementById("myDIV").innerHTML="你最近怎么样？";
+	</script>
+ 	<script type="text/javascript">
+ 	var firstname;
+ 	firstname="Hege";
+ 	document.write(firstname);
+ 	document.write("<br>");
+ 	firstname="Tove";
+ 	document.write(firstname);
+ 	</script>
+</body>
+</html>
