@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var num = "30";
+	var info = "www.MLDNJAVA.cn";
+	alert("数字:" + num + ";字符串:" + info);
+</script>
+<script type="text/javascript">
+	function fun() {
+		alert("hello world!")
+		return "www.baidui.com";
+	}
+	alert(fun());
+</script>
+</head>
+<body>
+	<script type="text/javascript">
+		str = "MLDN";
+		if (str == "MLDN") {
+			alert("内容符合判断!");
+		} else {
+			alert("内容不符合判断!");
+		}
+	</script>
+	<script type="text/javascript">
+		var rows = 9;
+		var cols = 9;
+		document.write("<table border=\"1\">");
+		for (var i = 1; i <=rows; i++) {
+			document.write("<tr>");
+			for (var j = 1; j <= cols; j++) {
+				if(j<=i){
+				document.write("<td>"+i+"*"+j +"="+ i * j+ "</td>");
+			}else{
+				document.write("<td>&nbsp;</td>");
+			}
+			}
+			document.write("</tr>");
+		}
+		document.write("</table>");
+	</script>
+</body>
+</html>

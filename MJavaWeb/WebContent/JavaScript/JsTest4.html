@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>关闭不弹窗，点击不弹窗？</title>
+<script type="text/javascript">
+function hello(){
+	alert("欢迎你的光临!");
+}
+function byebye() {
+	alert("走了就别回来了!");
+} 
+</script>
+<script type="text/javascript">
+function click(){
+	alert("你点我干嘛");
+}
+</script>
+</head>
+<body onload="hello()" onunload="byebye()">
+<h3><a href="#" onclick="click()">按我吧!</a></h3>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function fun() {
+	alert("你点我干什么啊!")
+}
+</script>
+<script type="text/javascript">
+function show() {
+	var value=document.myform.name.value;
+	alert("输入的内容是:"+value);
+}
+</script>
+<script type="text/javascript">
+function validate(f) {
+	var value=f.email.value;
+	if (!/^\w+@\w+.\w+$/.test(value)) {
+		alert("EMAIL 输入格式不正确!");
+		f.email.focus();
+		f.email.select();
+		return false;
+	}
+	return true;
+}
+</script>
+</head>
+<body>
+<h3><a href="#" onclick="fun()">按我吧!</a></h3>
+<form action="" method="post" name="myform">
+<input type="text" name="name">
+<input type="button" value="显示" onclick="show()">
+</form>
+
+
+
+<form action="" method="post" name="myform2" onsubmit="return validate(this)">
+EMAIL:<input type="type" name="email">
+<input type="submit" value="提交">
+</form>
+</body>
+</html>

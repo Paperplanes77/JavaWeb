@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>这里关于document.write怎么理解？</title>
+<script type="text/javascript">
+	function show() {
+		var arr=new Array(3);
+		for(var i=0;i<arr.length;i++){
+			arr[i]=i;
+		}
+		var str="数组的内容";
+		for (var j = 0; j < arr.length; j++) {
+			str+=arr[j]+"、";
+		}
+		return str;
+	}
+	alert(show());
+</script>
+<script type="text/javascript">
+	function doMath(m) {
+		var all=0;
+		var str="1到100之间的所有数之和为:"
+		for(var i=0;i<=m;i++){
+			all+=i;
+		}
+		str+=all;
+		//document.write(str);
+		alert(str);
+	}
+</script>
+<script type="text/javascript">
+	function show2() {
+		var arr=new Array("xiaoming","xiaohei","xiaocang");
+		var str="数组的内容";
+		for (var j = 0; j < arr.length; j++) {
+			str+=arr[j]+"、";
+		}
+		return alert(str);
+	}
+</script>
+<script type="text/javascript">
+	function NClose() {
+	window.close();
+}
+</script>
+</head>
+<body onload="doMath(100)">
+<input name="button1" type="button" value="打开有惊喜!" onclick="show2()">
+<input name="button2" type="button" value="关闭窗口！" onclick="NClose()">
+</body>
+</html>
