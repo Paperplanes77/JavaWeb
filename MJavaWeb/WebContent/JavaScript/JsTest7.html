@@ -12,8 +12,20 @@ function fun() {
 	}
 }
 </script>
+<script type="text/javascript">
+function fun2(thisurl) {
+	window.location=thisurl;
+}
+</script>
 </head>
 <body>
 <a href="#" onclick="fun()">删除邮件</a>
+<br/>
+<select name="url" onchange="fun2(this.value)">
+<option value="#">==请选择要浏览的站点==</option>
+<option value="http://www.baidu.com">百度</option>
+<option value="http://www.sina.com">新浪</option>
+
+</select>
 </body>
 </html>
