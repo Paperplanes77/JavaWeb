@@ -3,8 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript">
+function function_Name(exp1,exp2,exp3,exp4) {
+	var num=function_Name.arguments.length;
+	document.write(exp1+"<br/>");
+	if(num>1)
+		document.write(exp2+"<br/>");
+	if(num>2)
+		document.write(exp3+"<br/>");
+	if(num>3)
+		document.write(exp4);
+}
+function age() {
+	try{
+	var m="age";
+	var n=20;
+	document.write(parseInt(m)+n);
+	throw new Error("not a valid number");
+	}catch (errMsg) {
+		// TODO: handle exception
+		alert(errMsg.message);
+	}
+}
+</script>
 </head>
-<body>
-
+<body onload="age()">
+//里面要用单引号
+<input type="button" name="button" value="双击我吧!" ondblclick="function_Name(23,true,78,'ssss')">
 </body>
 </html>

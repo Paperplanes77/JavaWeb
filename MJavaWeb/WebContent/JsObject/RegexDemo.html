@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>正则表达式测试</title>
+<script type="text/javascript">
+	//是不是0-9之间的数字吗
+	//+包含多个 *0到多个 ？0到多个
+	var reg=new RegExp("^1[0-9]{10}$");
+	//手机号第一位为1
+	var reg2=/^[0-9]{6,8}$/;
+	//alert(typeof reg);
+	//alert(typeof reg2);
+	//alert(reg2.test("123456789"));
+	alert(reg.test("13234324332"))
+	//邮箱验证:
+	var reg4=/^\w+$/;//0-9 a-z A-Z _
+	var reg5=/^\w(4,6)$/;
+	var reg6=/^\w(2,10)@\w(2,10)(.\w(2,3))+$/;
+	alert(reg6.test("139 -qq.com"));
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>全局对象的测试</title>
+</head>
+<script type="text/javascript">
+	var str2="alert(2+3+5+6)"
+	var str="alert('sgsadfsa')";
+	eval(str);
+	var str3="http://www.baidu.com?username='张三'";
+	var str4=encodeURI(str3);
+	alert(str4);
+	//传给后台需要反编译数据 解决乱码问题 知识数据
+	var str5=decodeURI(str4);
+	alert(str5);
+	//将数据都编码了 更将彻底
+	var ss=encodeURIComponent(str3);
+	alert(ss);
+	var ss2=uncodeURIComponent(ss);
+	alert(ss2);
+</script>
+<body>
+	this is my html?<br/>
+</body>
+</html>
