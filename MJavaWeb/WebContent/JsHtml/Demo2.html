@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table align="center" cellpadding="10">
+	<tr>
+		<td>姓名: <input type="text" id="username"/></td>
+		<td>Email:<input type="text" id="email"/></td>
+		<td>年龄:<input type="text"  id="age"/></td>
+ 	</tr>
+ 	<tr>
+ 		<td colspan="3" align="center"><input type="button" value="添加" onclick="addTR()"/></td>
+ 	</tr>
+</table>
+<hr/>
+<table id="tabInfo" align="center" width="500" border="1">
+	<tr>
+		<td>姓名</td>
+		<td>Email</td>
+		<td>年龄</td>
+		<td>操作</td>
+	</tr>
+</table>
+</body>
+<script type="text/javascript">
+function addTR(){
+	//1.获取三个文本框的值
+	var username = document.getElementById("username").value;
+	var email = document.getElementById("email").value;
+	var age = document.getElementById("age").value;
+	//2.获取tabInfo表格的节点
+	var tabNode = document.getElementById("tabInfo");
+	//3.创建行元素节点
+	var trNode = document.createElement("tr");
+	//4.创建四个单元格节点
+	var userTd = document.createElement("td");
+	var emailTd = document.createElement("td");
+	var ageTd = document.createElement("td");
+	var dropTd = document.createElement("td");
+	//5.创建3个文本节点
+	var userTxt = document.createTextNode(username);
+	var emailTxt = document.createTextNode(email);
+	var ageTxt = document.createTextNode(age);
+	//6.创建一个input节点，并且设置type属性是button，设置onclick属性是一个删除的方法
+	//<input type='button' onclick='_del(this)' value='删除' />
+	var iptNode = document.createElement("input");
+	iptNode.setAttribute("type","button");
+	iptNode.setAttribute("onclick","_del(this)");
+	iptNode.setAttribute("value","删除");
+	//7.逐级添加
+	//把单元格中的内容添加进来
+	userTd.appendChild(userTxt);
+	emailTd.appendChild(emailTxt);
+	ageTd.appendChild(ageTxt);
+	dropTd.appendChild(iptNode);
+	//把单元格添加到行上
+	trNode.appendChild(userTd);
+	trNode.appendChild(emailTd);
+	trNode.appendChild(ageTd);
+	trNode.appendChild(dropTd);
+	//把行节点添加到表格节点上
+	tabNode.appendChild(trNode);
+}
+</script>
+</html>

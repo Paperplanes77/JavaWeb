@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<ul >
+		<li id="bj" onclick="changeNode()">北京</li>
+		<li>湖南</li>
+		<li>山东</li>
+	</ul>
+	<ul>
+		<li  id="game">打<p>灰机</p></li>
+		<li>抓泥鳅</li>
+		<li>斗地主</li>
+	</ul>
+	<script type="text/javascript">
+		function changeNode(){
+			//1.获取两个节点。bj和game
+			var bjNode = document.getElementById("bj");
+			var gameNode = document.getElementById("game");
+			//2. 替换节点。两种方式：
+			//第一种：自己干
+			//bjNode.replaceNode(gameNode);
+			//第二种：父节点干
+			bjNode.parentNode.replaceChild(gameNode,bjNode);
+			//节点的克隆  cloneNode(true|false);
+			//var newGameNode = gameNode.cloneNode(false);
+			//     var newGameNode = gameNode.cloneNode(true);
+			//alert(gameNode.getAttribute("id"));
+			//alert(newGameNode.getAttribute("id"));
+			//使用节点的替换方法，替换克隆的节点
+			//     bjNode.replaceNode(newGameNode);
+
+			/*
+				克隆节点的问题：
+					当使用克隆节点时，无论参数是true或者false都会把属性节点克隆过去。
+			*/
+		}
+	</script>
+</body>
+</html>

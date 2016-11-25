@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<input type="button" value="添加选项" onclick="addOptions()"/>
+	<select>
+		<option>博士</option>
+		<option>硕士</option>			
+		<option>本科</option>
+		<option>专科</option>
+		<option>高中</option>
+		<option>初中</option>
+	</select>
+	<script type="text/javascript">
+		function addOptions(){
+			//有三种方式：
+			//第一种：使用XML DOM
+			/* //1.获取select节点
+			var selNode = document.getElementsByTagName("select")[0];
+			//2.创建一个option节点
+			var optNode = document.createElement("option");
+			//3.创建一个文本节点
+			var txtNode = document.createTextNode("小学");
+			//4.把文本节点添加到option节点上
+			optNode.appendChild(txtNode);
+			//5.把option节点添加到select节点上
+			selNode.appendChild(optNode); */
+			
+			 //第二种:使用Html DOM
+			 //1.获取select节点
+			/*  var selNode=document.getElementsByTagName("select")[0];
+			//2.创建一个option
+			var optObj=new Option("小学");
+			//3.使用select对象的add方法,向下拉表中添加一个选项
+			selNode.add(optObj); */
+			
+			//第三种:使用HTML DOM,兼容性不好 IE不可用 ，chrome好使
+			//1.获取select节点
+			var selNode=document.getElementsByTagName("select")[0];
+			//2.使用innerHTML添加一个新option选项
+			//alert(selNode.innerHTML);
+			selNode.innerHTML+="<option>小学</option>";
+			}
+			</script>
+</body>
+</html>
