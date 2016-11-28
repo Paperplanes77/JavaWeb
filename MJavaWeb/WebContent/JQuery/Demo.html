@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JQuery测试 标签选择器</title>
+//需要先导入这个库 自闭和再使用
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"  type="text/javascript"></script>
+<script>
+	//$("div").css('color','1px solid red');
+	//$("#div").css('color','1px solid red');
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("div").css('border','1px solid red');
+		});
+	});
+	/* $(document).ready(function(){
+			$("button").click(function(){
+				$("p").hide();
+			});
+		}); */
+</script>
+</head> 
+<body>
+<div>
+	<p>
+	<label>天知道我什么颜色</label><br/>
+	<span><label>你怎么知道我什么颜色</label></span>
+	</p>
+	<label>我就不告诉你我是什么颜色</label>
+</div>
+<button>点我</button>
+<!-- <input type="button" name="button" value="标签按钮" onclick="test()">
+ -->
+<!-- <h2>这是一个标题</h2>
+<p>这是一个段落</p>
+<p>这是另外一个段落</p>
+<button>点我</button> -->
+</body>
+</html>

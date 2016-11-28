@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>操作DOM</title>
+<script src="../Js/jquery.min.js"  type="text/javascript"></script>
+<style type="text/css">
+.myClass{
+	color:blue;
+	font-family:华文行楷;
+	font-size:65px;
+}
+.myClass2{
+	text-align:center;
+}
+</style>
+</head>
+<body>
+	<!-- <form action="foo.php" id="my_form"></form>
+	<script type="text/javascript">
+		console.log($('#my_form').attr('action'));
+		$('#my_form').attr('action','bar.php');
+		//JavaScript中 setAttribute好get来操作属性
+		//jquery中attr来对属性操作  2个参数就是修改属性
+		console.log($('#my_form').attr('action'));
+		//删除属性
+		$('#my_form').removeAttr('bar.php');
+		console.log($('#my_form').removeAttr('bar.php'));
+	</script> -->
+	<p><b>Hello</b></p>
+	<!-- 改变html的内容 -->
+	<script type="text/javascript">
+		console.log($('p').html());
+		$('p').html('<i>World</i>');
+		console.log($('p').html());
+	</script>
+	<!-- //css()样式 -->
+	<script type="text/javascript">
+		//$('p').style.color='red';
+		$('p').css('color','red');
+		console.log($('p').css('color'));
+		$('p').addClass("myClass myClass2");//使用空格  双引号 可以同时添加多个样式
+		$('p').removeClass("myClass");//可以删除所有也可以  单独删除
+	</script>
+	
+	 <!-- //操作的元素的内部 -->
+	 <p>Java is a </p>
+	 <script type="text/javascript">
+	 	$('p').append('boy !').addClass("myClass myClass2");//在尾部追加
+	 	$('p').prepend('such boring !').addClass("myClass");//在头部添加
+	 </script>
+	 
+	 
+	 
+</body>
+</html>

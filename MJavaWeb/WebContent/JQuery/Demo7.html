@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>同一级别的追加</title>
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"  type="text/javascript"></script>
+</head>
+<body>
+<!-- <p>hello</p>
+<script type="text/javascript">
+	$('p').after('<p>world</p>');
+	$('p').before('<p> I am</p>');
+</script> -->
+<p><input text="text"/><input type="button" value="Go"/></p>
+<script type="text/javascript">
+	var cloned_p=$('p').clone();
+	$('p').after(cloned_p);
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>属性选择器  表单选择器</title>
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"  type="text/javascript"></script>
+</head>
+<body>
+<input id="ipt" type="text" class="cls_ipt"/>
+<script type="text/javascript">
+	//$('input[id=ipt]').val('hello');
+	//$('#ipt').val('hello2');
+	//$('input[class=cls_ipt').val('hello3');这三个都是等价
+</script>
+<hr/>
+<form id="my_form">
+	<input type="text"/>
+	<input type="radio"/>
+	<input type="radio" checked="checked"/>
+	<input type="checkbox"/>
+	<input type="checkbox" checked="checked"/>
+</form>
+<script type="text/javascript">
+	//console.log($('#my_form:input:checked'));
+</script>
+<hr/>
+<select id="sel" multiple="multiple">
+	<option value="0">苹果</option>
+	<option value="1" selected="selected">橘子</option>
+	<option value="2">荔枝</option>
+	<option value="3" selected="selected">葡萄</option>
+	<option value="4">香蕉</option>
+</select>
+<script type="text/javascript">
+	console.log($('#sel:selected'));
+</script>
+</body>
+</html>
