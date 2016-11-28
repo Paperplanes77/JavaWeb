@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery事件</title>
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"  type="text/javascript"></script>
+</head>
+<body>
+<script type="text/javascript">
+	/*给按钮绑定一个click事件 */
+	$(function(){
+		$('#btn').bind('click',function(){
+			$(this).attr("disabled","true");
+		})
+	})
+	$(function(){
+		$('text').bind('focus',function(){
+			$(this).css('color','red');
+		})
+	})
+</script>
+<input id="btn" type="button" value="点我"/>
+<input type="text" id="text" value="这是文本框"/>
+</body>
+</html>
