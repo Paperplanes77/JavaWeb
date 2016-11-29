@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>点击隐藏然后再点击显示</title>
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"  type="text/javascript"></script>
+ </head>
+<body>
+<div>
+	<dl>
+		<dd>怎么说话的啊</dd>
+	</dl>
+	<p>铁头需要被打碎</p>
+</div>
+<input type="button" id="button" value="点击"/>
+<hr/>
+<!-- //显示隐藏用 -->
+<script type="text/javascript">
+//设置一个boolean类型的变量  改变设置一个a
+	var a=true;
+	$(function(){
+		$("#button").bind('click',function(){
+			//$('#button').attr("disabled","true");
+			$('#button').val("显示");
+			if (a==true) {
+				$('div').hide("slow",function(){
+					$("#button").bind('click',function(){
+					$('#button').val("隐藏").css('color','blue');
+				})
+				});
+				a=false;
+			}else {
+				$('div').show("slow",function(){
+					$("#button").bind('click',function(){
+					$('#button').val("显示").css('color','green');
+				})
+				});
+				a=true;
+			}
+		/* 	$('div').hide("slow",function(){
+				$("#button").bind('click',function(){
+				$('#button').val("隐藏");
+				$('div').show("slow").css('color','green');
+			})
+			}); */
+		})
+	})
+</script>
+<hr/>
+<!-- //显示隐藏用 -->
+<!-- <script type="text/javascript">
+	var a=true;
+	$(function(){
+		$("#button").bind('click',function(){
+			//$('#button').attr("disabled","true");
+			$('#button').val("显示");
+			$('div').slideUp("slow",function(){
+					$("#button").bind('click',function(){
+					$('#button').val("隐藏");
+					$('div').slideToggle("slow").css('color','orange');
+					$('#button').val("隐藏");
+					})
+					});
+		})
+	})
+</script> -->
+<!-- <script type="text/javascript">
+	$(function(){
+		$("#button").bind('click',function(){
+			//$('#button').attr("disabled","true");
+			$('#button').val("显示");
+			$('div').slideToggle("slow",function(){
+				$("#button").bind('click',function(){
+				$('#button').val("隐藏");
+				$('div').slideToggle("slow").css('color','orange');
+			})
+			});
+		})
+	})
+</script> -->
+</body>
+</html>

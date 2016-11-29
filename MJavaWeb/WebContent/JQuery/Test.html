@@ -10,7 +10,27 @@
 <script type="text/javascript">
 	//$('p').replaceWith('<b>World</b>');
 	//console.log($('p').replaceWith('<b>World</b>'));
-	$('p').wrap('<div style="color:red"></div>');
+	//$('p').wrap('<div style="color:red"></div>');
+	$(function(){
+		$('#button').bind('click',function(){
+			$(this).show('slow',function(){
+				$('#button').bind('click',function(){
+					$('p').hide('slow',function(){
+						alert("我消失了");
+					});
+				})
+			});
+		})
+	})
+	//隐藏按钮
+	/* $(function(){
+		$('#button').bind('click',function(){
+			$('p').hide('slow',function(){
+				alert("我消失了");
+			});
+		})
+	}) */
 </script>
+<input type="button" value="点击" id="button"/>
 </body>
 </html>
