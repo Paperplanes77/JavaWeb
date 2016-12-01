@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>奇怪的东西</title>
+<script src="../Js/jquery.min.js"  type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="../css/my.css"></link>
+</head>
+<body bgcolor="lightblue" align="center">
+<p align="center" style="color: red">九九乘法表</p>
+<hr/>
+<input id="button1" type="button" value="打印乘法表" onclick="prt()"/>
+<input id="button2" type="button" value="统计" onclick="show()"/>
+<input id="button3" type="button" value="样式" onclick="sty()"/>
+<script type="text/javascript">
+			 //定义一个变量接受行的和
+		function prt() {
+			 var str="<center><table id=\"mytab\" border=\"1\"></center>";
+			 //控制全局的总和
+			 var Sum=0;
+			//每列的和
+			var cowSum=0;
+			 for (var i=1; i <=10; i++) {
+					str+="<tr>";
+					//控制行的数据和
+					var rowSum=0;
+					for (var j = 1; j <=10; j++) {
+						//var cowSum=0;
+						//求每列的和
+						//只打印9行9列的
+						if(j<=i&&j<=9&&i<=9){
+						str+="<td>"+i+"*"+j+"="+(j*i)+"\r\t"+"</td>";
+						Sum+=j*i;
+						rowSum+=j*i;
+						var m=i;
+						if (j<=9) {
+							cowSum+=m*j;
+						}
+						}else if(i==10&&j==10){
+							str+="<td>"+Sum+"</td>";	
+						}else if(j==10){
+							str+="<td id='see' style='display:none'>"+rowSum+"</td>"; 
+						}else if(i==10){
+							str+="<td>"+cowSum+"</td>";	
+						}else{
+							str+="<td>"+"&nbsp;"+"</td>";
+						}
+					}
+					str+="</tr>";
+				}
+				str+="</table>";
+				$('body').append(str);
+			 }
+	 function show(){
+		 $('#see').toggle();
+	 }
+	 function sty() {
+		//$('#mytab').css({'color','yellow'}{'font-size','50px'});这种方式不行
+		/* $('#mytab').css({width:'80px',
+						height:'25px',
+						color:'red',
+						border:'1px solid black',
+						margin:'0 auto'
+		}); */
+		 $('#mytab').css('color','yellow').css('font-size','25px').css('font-family','仿宋楷体');
+	}
+</script>
+</body>
+</html>
