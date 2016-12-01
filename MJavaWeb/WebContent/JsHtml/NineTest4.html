@@ -21,7 +21,7 @@
 			 //控制全局的总和
 			 var Sum=0;
 			//每列的和
-			var cowSum=0;
+			//var cowSum=0;
 			 for (var i=1; i <=10; i++) {
 					str+="<tr>";
 					//控制行的数据和
@@ -34,15 +34,18 @@
 						str+="<td>"+i+"*"+j+"="+(j*i)+"\r\t"+"</td>";
 						Sum+=j*i;
 						rowSum+=j*i;
-						var m=i;
-						if (j<=9) {
-							cowSum+=m*j;
-						}
+						//所有数据的总和
 						}else if(i==10&&j==10){
 							str+="<td class='see' style='display:none'>"+Sum+"</td>";	
+						//所有行的数据总和
 						}else if(j==10){
 							str+="<td class='see' style='display:none'>"+rowSum+"</td>"; 
+						//第十列数据和 
 						}else if(i==10){
+							var cowSum=0;
+							for(x=j;x<10;x++){
+								cowSum+=x*j;
+							}
 							str+="<td class='see' style='display:none'>"+cowSum+"</td>";	
 						}else{
 							str+="<td>"+"&nbsp;"+"</td>";
