@@ -23,7 +23,7 @@
 			//每列的和
 			//var cowSum=0;
 			 for (var i=1; i <=10; i++) {
-					str+="<tr>";
+					str+="<tr class='row'>";
 					//控制行的数据和
 					var rowSum=0;
 					for (var j = 1; j <=10; j++) {
@@ -31,7 +31,7 @@
 						//求每列的和
 						//只打印9行9列的
 						if(j<=i&&j<=9&&i<=9){
-						str+="<td>"+i+"*"+j+"="+(j*i)+"\r\t"+"</td>";
+						str+="<td class='cow'>"+i+"*"+j+"="+(j*i)+"\r\t"+"</td>";
 						Sum+=j*i;
 						rowSum+=j*i;
 						//所有数据的总和
@@ -71,7 +71,9 @@
 						border:'1px solid black',
 						margin:'0 auto'
 		}); */
-		 $('#mytab').css('color','yellow').css('font-size','25px').css('font-family','仿宋楷体').css('background','red');
+		 $('#mytab').css('color','red').css('font-size','25px').css('font-family','仿宋楷体').css('background','light-blue').css('border','1px solid');
+		$('#mytab','td').css('border','1px solid');
+		$('#mytab','tr').css('border','1px solid');
 	}
 </script>
 </body>
