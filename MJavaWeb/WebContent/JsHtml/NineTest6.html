@@ -25,7 +25,7 @@
 					str+="<tr class='row'>";
 					//控制行的数据和
 					var rowSum=0;
-					for (var j = 0; j <=11; j++) {
+					for (var j = 0; j <=10; j++) {
 						//var cowSum=0;
 						//求每列的和
 						//只打印9行9列的 !=0 !10是为了让第一列或者第10行不计算
@@ -40,13 +40,13 @@
 						}else if(j==10&&i!=0){
 							str+="<td class='see' style='display:none'>"+rowSum+"</td>"; 
 						//所有列数据和  不让第一列和求和和最后一列求和
-						}else if(i==10&&j!=0&&j!=11){
+						}else if(i==10&&j!=0){
 							var cowSum=0;
 							for(x=j;x<10;x++){
 								cowSum+=x*j;
 							}
 							str+="<td class='see' style='display:none'>"+cowSum+"</td>";	
-						}else if ((i==10&&j==0)||(i==0&&j==11)){
+						}else if ((i==10&&j==0)||(i==0&&j==10)){
 							//书写统计的位置
 							str+="<td class='see' style='display:none'>"+"统计"+"</td>";
 						}else{
