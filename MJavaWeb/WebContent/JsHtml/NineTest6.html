@@ -49,6 +49,9 @@
 						}else if ((i==10&&j==0)||(i==0&&j==10)){
 							//书写统计的位置
 							str+="<td class='see' style='display:none'>"+"统计"+"</td>";
+						}else if (i==0||j==0) {
+							//让空白包围的外层行列 先影藏
+							str+="<td class='see' style='display:none'>"+"&nbsp;"+"</td>";
 						}else{
 							str+="<td>"+"&nbsp;"+"</td>";
 						}
