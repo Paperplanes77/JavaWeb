@@ -20,15 +20,15 @@
 			 var str="<center><table id=\"mytab\" border=\"1\"></center>";
 			 //控制全局的总和
 			 var Sum=0;
-			 for (var i=1; i <=10; i++) {
+			 for (var i=0; i <=10; i++) {
 					str+="<tr class='row'>";
 					//控制行的数据和
 					var rowSum=0;
-					for (var j = 1; j <=10; j++) {
+					for (var j = 0; j <=11; j++) {
 						//var cowSum=0;
 						//求每列的和
 						//只打印9行9列的
-						if(j<=i&&j<=9&&i<=9){
+						if(j<=i&&0<j<=9&&1<=i<=9){
 						str+="<td class='cow'>"+i+"*"+j+"="+(j*i)+"\r\t"+"</td>";
 						Sum+=j*i;
 						rowSum+=j*i;
@@ -45,6 +45,8 @@
 								cowSum+=x*j;
 							}
 							str+="<td class='see' style='display:none'>"+cowSum+"</td>";	
+						}else if ((i==8&&j==0)||(i==0&&j==11)){
+							str+="<td class='see' style='display:none'>"+"统计"+"</td>";
 						}else{
 							str+="<td>"+"&nbsp;"+"</td>";
 						}
