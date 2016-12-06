@@ -17,7 +17,8 @@
 		var flag=true;
 			 //定义一个变量接受行的和
 		function prt() {
-			 var str="<center><table id=\"mytab\" border=\"1\"></center>";
+			//cellspacing cellpadding  单元格间距0  间距粗细 cellspacing=\"0\" cellpadding=\"3\"
+			 var str="<center><table id=\"mytab\" border=\"1\" ></center>";
 			 //控制全局的总和
 			 var Sum=0;
 			 for (var i=0; i <=10; i++) {
@@ -76,8 +77,9 @@
 						border:'1px solid black',
 						margin:'0 auto'
 		}); */
-		 $('#mytab').css('color','red').css('font-size','25px').css('font-family','仿宋楷体').css('background','lightblue').css('border','1px solid black');
-		$('td').css('border','1px solid black');
+		 $('#mytab').css('color','red').css('font-size','25px').css('text-align','center').css('background','lightblue').css('border','1px solid black').css('border-collapse','collapse');//.css('border-collapse','collapse')
+		 //将表格边框颜色加粗3px
+		 $('td').css('border','3px solid black');
 		//$('#mytab','tr').css('border','1px solid');
 	}
 </script>
