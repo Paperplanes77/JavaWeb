@@ -3,8 +3,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@page import="javabean.*" %>
 <<jsp:useBean id="book" class="javabean.BookBean">
-	<jsp:setPropertyname="book" property="bookName"/>
-	<jsp:setPropertyname="book" property="bookNum"/>
+	<jsp:setProperty name="book" property="bookName"/>
+	<jsp:setProperty name="book" property="bookNum"/>
 </jsp:useBean>
 
 
