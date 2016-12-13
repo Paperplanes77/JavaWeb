@@ -9,4 +9,40 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <servlet-name>ServletDemo</servlet-name>
+    <servlet-class>servlet.ServletDemo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletDemo</servlet-name>
+    <url-pattern>/servlet/ServletDemo</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>BlueServlet</servlet-name>
+    <servlet-class>servlet.BlueServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BlueServlet</servlet-name>
+    <url-pattern>/servlet/BlueServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>InitTest</servlet-name>
+    <servlet-class>servlet.InitTest</servlet-class>
+    <init-param>
+      <param-name>institute</param-name>
+      <param-value>新安人才网</param-value>
+    </init-param>
+    <init-param>
+      <param-name>major</param-name>
+      <param-value>Java技术</param-value>
+    </init-param>
+    <init-param>
+      <param-name>count</param-name>
+      <param-value>100</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InitTest</servlet-name>
+    <url-pattern>/servlet/InitTest</url-pattern>
+  </servlet-mapping>
 </web-app>
