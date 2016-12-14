@@ -35,6 +35,7 @@ public class MyLoginServletDemo extends HttpServlet {
 		 PrintWriter out=response.getWriter();
 		 out.println("<HTML><TITLE>用servlet测试get/post方法</TITLE></HEAD>");
 		 out.println("<BODY>");
+		 
 		 out.println("<H2>调用了doGet()方法</H2><p>");
 		 out.println("<H2>用户输入信息如下:</H2>");
 		 String username=request.getParameter("username");

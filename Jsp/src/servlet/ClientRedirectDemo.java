@@ -27,7 +27,7 @@ public class ClientRedirectDemo extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getSession().setAttribute("name", "tf");
+		request.getSession().setAttribute("name", "国人");
 		request.setAttribute("info","魔法的城堡");
 		response.sendRedirect("get_info.jsp");
 	}

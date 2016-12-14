@@ -3,6 +3,7 @@ package servlet;
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -29,8 +30,12 @@ public class ServerRedirectDemo extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		/*服务器跳装是可以传递session request application*/
 		request.getSession().setAttribute("name", "蛋炒饭");
 		request.setAttribute("info","熟悉的童年");
+		/*ServletContext context=getServletConfig().getServletContext();*/
+		request.getServletContext().setAttribute("good","美味的");
+		//context.setAttribute("good","美味的" );
 		RequestDispatcher requestDispatcher=request.getRequestDispatcher("get_info.jsp");
 		requestDispatcher.forward(request, response);
 	}

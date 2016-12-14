@@ -6,10 +6,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
-	<% request.setCharacterEncoding("UTF-8");%>
+	<% response.setCharacterEncoding("UTF-8");%>
 <body>
 	<h2>session属性:<%=session.getAttribute("name") %></h2>
 	<h2>request属性:<%=request.getAttribute("info") %></h2>
-	<h2>application:<%=application.getAttribute("info") %></h2>
+	<h2>application:<%=application.getAttribute("good") %></h2>
 </body>
 </html>
