@@ -19,6 +19,7 @@ import org.apache.jasper.tagplugins.jstl.core.Out;
 public class InitTest extends HttpServlet {
 	private String myInstitute=null;
 	private String myMajor=null;
+	private String myFrom=null;
 	private int count=0;
 	private static final long serialVersionUID = 1L;
        
@@ -44,6 +45,11 @@ public class InitTest extends HttpServlet {
 		if (myMajor==null) {
 			myMajor="";
 		}
+		myFrom=config.getInitParameter("from");
+		if (myFrom==null) {
+			myFrom="";
+			
+		}
 		String strCount=config.getInitParameter("count");
 		try {
 			count=Integer.parseInt(strCount);
@@ -66,6 +72,7 @@ public class InitTest extends HttpServlet {
 		out.println("<BODY>");
 		out.print("<H3>所在学院:"+myInstitute+"<H3>");
 		out.print("<H3>所学专业:"+myMajor+"</H3>");
+		out.print("<H3>籍贯:"+myFrom+"</H3>");
 		count++;
 		out.print("<H3>此Servlet的访问次数:"+count+"<H3>");
 		out.println("</BODY>");
@@ -78,6 +85,7 @@ public class InitTest extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		request.setCharacterEncoding("UTF-8");
 		doGet(request, response);
 	}
 

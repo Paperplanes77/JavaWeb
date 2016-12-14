@@ -56,12 +56,16 @@ public class MyLoginServletDemo extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		 response.setContentType("text/html;charset=GB2312");
+		/* 解决乱码的一种方式*/
+		 //request.setCharacterEncoding("UTF-8");
 		 PrintWriter out=response.getWriter();
 		 out.println("<HTML><TITLE>用servlet测试get/post方法</TITLE></HEAD>");
 		 out.println("<BODY>");
 		 out.println("<H2>调用了doPost()方法</H2><p>");
 		 out.println("<H2>用户输入信息如下:</H2>");
 		 String username=request.getParameter("username");
+		 /*第二种解决乱码的问题*/
+		 username=new String(username.getBytes("iso-8859-1"), "UTF-8");
 		 if(username==null||username=="")
 			 username="未输入";
 		 String userpwd=request.getParameter("password");
