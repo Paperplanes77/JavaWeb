@@ -46,7 +46,7 @@ public class ABCHomePage extends HttpServlet {
 		out.println("<font size='4' color='#000099'>");
 		out.println("&nbsp;&nbsp;ABC limited founded in 1890 is a multinationalcpmpany spead across six nations.<br><br>");
 		out.println("we deal with garmentexport and online sales of designer wares.<br><br>");
-		out.println("To hava a look at our fascinating collection check out at <a href='www.baidu.com'></a></font><br><br>");
+		out.println("To hava a look at our fascinating collection check out at <a href='http://www.baidu.com'>百度的天空</a></font><br><br>");
 		rd=context.getRequestDispatcher("/servlet/Footer.html");
 		rd.include(request, response);
 		//rd.forward(request,response);
