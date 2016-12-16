@@ -16,6 +16,5 @@
 			<Input type="submit" value="提交">
 			<Input type="reset" value="重置"><br>
 	</Form>
-	//action="<%=request.getContextPath() %>/servlet/MyLoginServerDemo">
 </body>
 </html>

@@ -45,7 +45,7 @@ public class MyLoginServletDemo extends HttpServlet {
 		 if (userpwd==null||userpwd=="")
 			 userpwd="未输入";
 		 out.println("<H2>用户名:"+username+"</H2>");
-		 out.println("<H2>用户名:"+userpwd+"</H2>");
+		 out.println("<H2>密码为:"+userpwd+"</H2>");
 		 out.println("</BODY>");
 		 out.println("</HTML>");
 		 out.close();
@@ -66,7 +66,7 @@ public class MyLoginServletDemo extends HttpServlet {
 		 out.println("<H2>用户输入信息如下:</H2>");
 		 String username=request.getParameter("username");
 		 /*第二种解决乱码的问题*/
-		 username=new String(username.getBytes("iso-8859-1"), "UTF-8");
+		 //username=new String(username.getBytes("iso-8859-1"), "UTF-8");
 		 if(username==null||username=="")
 			 username="未输入";
 		 String userpwd=request.getParameter("password");
